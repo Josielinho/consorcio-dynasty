@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dynasty 8 — Bienes Raíces de Lujo</title>
+  <link rel="icon" type="image/png" href="https://github.com/Josielinho/imagenes/blob/main/Logos/consorcio-png.png?raw=true">
+
+  
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+
+
+  <div class="particles-container">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+
+
+  <section class="hero-container" id="inicio">
+    <div class="hero-overlay"></div>
+
+
+    <div class="hero-content">
+
+      <div class="premium-badge">
+        <span class="badge-text">Luxury Real Estate & Automotive</span>
+      </div>
+    
+
+      <h1 class="hero-title">
+        <span class="title-line" data-aos="fade-up">Consorcio</span>
+        <span class="title-line title-highlight" data-aos="fade-up" data-aos-delay="200">Dynasty 8</span>
+      </h1>
+
+      <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="400">
+        Donde el lujo encuentra su destino
+      </p>
+    
+
+      <div class="button-container" data-aos="fade-up" data-aos-delay="600">
+        <a href="dynasty8.html" class="hero-card primary">
+          <div class="card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Dynasty8</h3>
+            <p class="card-description">Propiedades exclusivas</p>
+          </div>
+          <div class="card-arrow">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </a>
+
+        <a href="Benefactor_Dealer.html" class="hero-card secondary">
+          <div class="card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M5 17h14v-5H5v5z"/>
+              <path d="M5 17H3a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h2v5zM19 17h2a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-2v5z"/>
+              <circle cx="7" cy="17" r="2"/>
+              <circle cx="17" cy="17" r="2"/>
+              <path d="M5 12V7l3-3h8l3 3v5"/>
+            </svg>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Benefactor</h3>
+            <p class="card-description">Vehículos de lujo</p>
+          </div>
+          <div class="card-arrow">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </a>
+
+        <a href="aroyo_muerto_receway.html" class="hero-card tertiary">
+          <div class="card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Arroyo Muerto</h3>
+            <p class="card-description">Experiencias únicas</p>
+          </div>
+          <div class="card-arrow">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+      
+    </div>
+
+
+    <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="800">
+      <div class="scroll-line"></div>
+      <span class="scroll-text">Explorar</span>
+    </div>
+  </section>
+
+ 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS animations
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 50
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        const el = document.querySelector(id);
+        if (el) {
+          e.preventDefault();
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Parallax effect on scroll
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const heroContent = document.querySelector('.hero-content');
+      if (heroContent) {
+        heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
+        heroContent.style.opacity = 1 - (scrolled / 600);
+      }
+    });
+
+    // Mouse move parallax effect
+    document.addEventListener('mousemove', (e) => {
+      const cards = document.querySelectorAll('.hero-card');
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
+      
+      cards.forEach((card, index) => {
+        const speed = (index + 1) * 2;
+        const xMove = (x - 0.5) * speed;
+        const yMove = (y - 0.5) * speed;
+        card.style.transform = `translate(${xMove}px, ${yMove}px)`;
+      });
+    });
+  </script>
+  
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</body>
+</html>
